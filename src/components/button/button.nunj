@@ -1,0 +1,31 @@
+{# {% macro button(props) %}
+	{% if props.href %}
+
+		<a href="{{props.href}}"class="{% if props.className %} {{ props.className }}{% endif %} {% if props.reset %} btn-reset {% else %} btn {% endif %}
+	{% if props.transparent %} btn_transparent
+	">
+			{{ props.children }}
+		</a>
+
+	{% else %}
+
+		<button class="{% if props.className %} {{ props.className }}{% endif %} {% if props.reset %} btn-reset {% else %} btn {% endif %}
+	{% if props.transparent %} btn_transparent
+	">
+			{{ props.children }}
+		</button>
+	{% endif %}
+{% endmacro %} #}
+
+{% macro button(props) %}
+	{% if props.href %}
+		<a href="{{ props.href }}"class="{{props.className}}  {% if props.reset %} btn-reset {% elif props.transparent %} btn btn_transparent {% else %} btn {% endif %} ">
+			{{ props.children }}
+		</a>
+	{% else %}
+
+		<button href="{{ props.href }}"class="{{props.className}}  {% if props.reset %} btn-reset {% elif props.transparent %} btn btn_transparent {% else %} btn {% endif %} ">
+			{{ props.children }}
+		</button>
+	{% endif %}
+{% endmacro %}

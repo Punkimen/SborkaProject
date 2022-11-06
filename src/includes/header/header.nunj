@@ -1,0 +1,35 @@
+{% from "../../components/menu/menu.nunj" import menu %}
+{% from "../../components/icon/icon.nunj" import icon %}
+<header class="header">
+	<div class="container">
+		<div class="header__wrapper">
+			<a href="#" class="logo">
+				<img src="../../assets/images/logo.svg" alt="logo"/>
+			</a>
+			{{ menu() }}
+			<div class="header__handle">
+				<button id="" class="header__btn icon-btn">
+					{{ icon({
+					iconName: 'lupe',
+					attr: 'viewBox="0 0 24 24" style="width: 24px; height: 24px;"'
+					}) }}
+				</button>
+				<button id="basket" class="header__btn icon-btn">
+					{{ icon({
+					iconName: 'cart',
+					attr: 'viewBox="0 0 24 21" style="width: 24px; height: 21px;"'
+					}) }}
+					<span id="cart-count" class="icon-btn__notification">2</span>
+				</button>
+				<div class="burger-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__mobile mobile-menu">
+		{{menu()}}
+	</div>
+</header>

@@ -1,0 +1,8 @@
+{% macro inputBlock(props) %}
+
+	<div class="input-block">
+		<label for="{{props.id}}" class="input-block__label">{{props.label}}</label>
+		<input id="{{props.id}} "type="{% if props.type%} {{props.type}} {%else%} text {%endif%}" class="input-block__field" name="{{props.name}}" placeholder="{{props.placeholder}}" value="{{props.value}}">
+	</div>
+
+{% endmacro %}

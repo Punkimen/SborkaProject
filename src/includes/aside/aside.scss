@@ -1,0 +1,67 @@
+.aside {
+	border-left: 1px solid $grey;
+	transition: all ease .6s;
+
+	@include max-screen($md3) {
+		position: absolute;
+		top: 0;
+		right: -100%;
+		z-index: 20;
+		background: #fff;
+		min-height: 100%;
+
+		&.show {
+			right: 0;
+		}
+	}
+}
+
+.aside-item {
+	padding: 40px 10px 40px 40px;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $grey;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+	}
+}
+
+
+.promo {
+
+	&__wrapper {
+		.input-block {
+			width: 100%;
+			margin-right: 10px;
+		}
+
+		display: flex;
+	}
+}
+
+.summ-item {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding-right: 14px;
+
+	&:not(:last-child) {
+		margin-bottom: 14px;
+	}
+
+	&_total {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 1;
+	}
+
+	&__label {
+		margin-right: 20px;
+	}
+
+	&__value {
+		white-space: nowrap;
+	}
+}

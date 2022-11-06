@@ -1,0 +1,105 @@
+{% from '../../components/icon/icon.nunj' import icon %}
+
+<aside class="aside">
+	<div class="aside-item basket">
+		<h2 class="aside-item__title title">My basket</h2>
+		<div class="basket__catalog">
+			{# <div class="basket-card">
+				<button class="btn-reset basket-card__delete">
+					{{icon({
+					iconName:"close",
+					attr: 'width="19" height="18" viewBox="0 0 19 18"'
+				})}}
+				</button>
+				<div class="basket-card__photo">
+					<img src="./assets/images/jacket.png" alt="jacket">
+				</div>
+				<div class="basket-card__content">
+					<div class="basket-card__text">Amet minim mollit non
+          deserunt ullamco est sit
+        </div>
+					<div class="basket-card__footer">
+						<div class="basket-card__handle">
+							<button class="basket-card__btn btn-reset">
+								{{icon({
+								iconName:"minus",
+								attr: 'width="21" height="20" viewBox="0 0 21 20" '
+							})}}
+							</button>
+							<div class="basket-card__count">1</div>
+							<button class="basket-card__btn basket-card__btn_plus btn-reset">
+								{{icon({
+								iconName:"plus",
+						attr: 'width="21" height="20" viewBox="0 0 21 20" '
+							})}}
+							</button>
+						</div>
+						<div class="basket-card__price">$ 525</div>
+					</div>
+				</div>
+			</div>
+			<div class="basket-card">
+				<button class="btn-reset basket-card__delete">
+					{{icon({
+					iconName:"close",
+					attr: 'width="19" height="18" viewBox="0 0 19 18"'
+				})}}
+				</button>
+				<div class="basket-card__photo">
+					<img src="./assets/images/cross.png" alt="cross">
+				</div>
+				<div class="basket-card__content">
+					<div class="basket-card__text">Amet minim mollit non</div>
+					<div class="basket-card__footer">
+						<div class="basket-card__handle">
+							<button class="basket-card__btn btn-reset">
+								{{icon({
+								iconName:"minus",
+								attr: 'width="21" height="20" viewBox="0 0 21 20" '
+							})}}
+							</button>
+							<div class="basket-card__count">1</div>
+							<button class="basket-card__btn basket-card__btn_plus btn-reset">
+								{{icon({
+								iconName:"plus",
+								attr: 'width="21" height="20" viewBox="0 0 21 20" '
+							})}}
+							</button>
+						</div>
+						<div class="basket-card__price">$ 525</div>
+					</div>
+				</div>
+			</div> #}
+		</div>
+	</div>
+	<div class="aside-item promo">
+		<h2 class="aside-item__title title">Promo code</h2>
+		<form id="promo_form">
+			<div class="promo__wrapper">
+				<div class="input-block">
+					<label for="" class="input-block__label"></label>
+					<input type="text" class="input-block__field" name=" promo" placeholder="Placeholder Text">
+				</div>
+				<button class="promo__btn btn">Apply</button>
+			</div>
+		</form>
+	</div>
+	<div class="aside-item summ">
+		<div class="summ-item">
+			<div class="summ-item__label">Subtotal</div>
+			<div class="summ-item__value">$1 050</div>
+		</div>
+		<div class="summ-item">
+			<div class="summ-item__label">Tax</div>
+			<div class="summ-item__value">$100</div>
+		</div>
+		<div class="summ-item">
+			<div class="summ-item__label">Shipping</div>
+			<div class="summ-item__value">$150</div>
+		</div>
+		<div class="summ-item summ-item_total">
+			<div class="summ-item__label">Total</div>
+			<div class="summ-item__value">$1 300</div>
+		</div>
+	</div>
+</aside>

@@ -1,0 +1,14 @@
+{% macro checkbox(props) %}
+
+	<label class="control {%if props.type === "radio"%} control_radio
+	{%else%} control_checkbox {%endif%} {{props.className}}">
+		<div class="control__text">
+			{{props.children}}
+		</div>
+		<input type="checkbox" name="{{props.name}}"
+		value="{% if props.value%} {{props.value}} {%else%} true {%endif%}"
+		 {%if props.checked%} checked {%endif%} >
+		<div class="control_indicator"></div>
+	</label>
+
+{% endmacro %}

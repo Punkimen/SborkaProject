@@ -1,0 +1,99 @@
+.control {
+	position: relative;
+	padding-left: 25px;
+	display: inline-block;
+	cursor: pointer;
+
+	&:hover {
+		input~.control_indicator {
+			border-color: $blue;
+		}
+	}
+
+	input {
+		width: 40px;
+		height: 100%;
+		z-index: 2;
+		cursor: pointer;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+
+
+		&:checked~.control_indicator:after {
+			display: block;
+		}
+
+		&.error~.control_indicator {
+			border-color: #EB5757;
+		}
+	}
+
+	label.error {
+		height: 0;
+		opacity: 0;
+	}
+
+	.control_indicator {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		left: 0;
+		top: 1px;
+		border: 1px solid $grey;
+
+		&:hover {
+			border-color: $blue;
+		}
+
+		&:after {
+			content: '';
+			display: none;
+		}
+	}
+
+	&_radio {
+
+		.control_indicator {
+			border-radius: 50%;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: $blue;
+			}
+		}
+	}
+
+	&_checkbox {
+		.control_indicator {
+			width: 18px;
+			height: 18px;
+
+			&:after {
+				content: '';
+				background: $blue;
+				display: none;
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+			}
+		}
+
+		.control__text {
+			color: #8C8C8C;
+		}
+	}
+
+}

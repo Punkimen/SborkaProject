@@ -1,0 +1,41 @@
+{
+	"menuItems": [
+		{
+			"name": "Women’s",
+			"path": "#"
+		},
+		{
+			"name": "Men’s",
+			"path": "#"
+		},
+		{
+			"name": "Home",
+			"path": "#"
+		},
+		{
+			"name": "Beauty",
+			"path": "#"
+		},
+		{
+			"name": "Sale",
+			"path": "#"
+		}
+	],
+	"progressSteps":[
+		{
+			"text": "Account",
+			"active": true
+		},
+		{
+			"text": "Shipping",
+			"active": true
+		},
+		{
+			"text": "Billing",
+			"current": true
+		},
+		{
+			"text": "Review"
+		}
+	]
+}

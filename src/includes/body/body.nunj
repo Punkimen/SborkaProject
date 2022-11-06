@@ -1,0 +1,15 @@
+{# {% from "../../components/button/button.nunj" import button %} #}
+
+{% from "../../components/progressBar/progressBar.nunj" import progressBar%}
+
+<div class="main-block">
+  <section class="payment">
+    {{progressBar({
+      activeNum: 2,
+      current: 3
+    })}}
+
+    {% include '../../includes/form/form.nunj' %}
+
+  </section>
+</div>

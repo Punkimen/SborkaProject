@@ -1,0 +1,25 @@
+{% macro progressBar(props) %}
+  <div class="progress-block">
+    {% for item in progressSteps %}
+      {% if  loop.index <= props.activeNum%}
+        <div class="progress-block__item progress-block__item_active" >
+          <div class="progress-block__number" data-text="{{item.text}}">
+            {{ loop.index }}
+          </div>
+        </div>
+      {% elif loop.index === props.current %}
+        <div class="progress-block__item progress-block__item_current" >
+          <div class="progress-block__number" data-text="{{item.text}}">
+            {{ loop.index }}
+          </div>
+        </div>
+        {% else%}
+        <div class="progress-block__item" >
+          <div class="progress-block__number" data-text="{{item.text}}">
+            {{ loop.index }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endmacro %}

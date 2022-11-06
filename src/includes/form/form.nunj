@@ -1,0 +1,102 @@
+{% from "../../components/button/button.nunj" import button%}
+{% from "../../components/checkbox/checkbox.nunj" import checkbox%}
+{% from "../../components/input/input.nunj" import inputBlock%}
+
+<div class="payment-form">
+  <form id="payment-form" action="#" method="#">
+    <h2 class="title payment-form__title">Billing Information</h2>
+    <div class="payment-form__type">
+      {{checkbox({
+        type:"radio",
+        name: "payment_type",
+        value: "card",
+        children: "Pay with Credit Card",
+        checked: true
+      })}}
+
+      {{checkbox({
+        type:"radio",
+        name: "payment_type",
+        value: "payPal",
+        children: '<img src="./assets/images/payPal.svg" alt="PayPal">'
+      })}}
+    </div>
+    <div class="payment-form__block">
+      <div class="payment-form__row">
+        {{inputBlock({
+          label: "Name on card",
+          name: "card_name",
+          placeholder: "Placehoolder text"
+        })}}
+      </div>
+      <div class="payment-form__row payment-form__row_grid">
+        {{inputBlock({
+          label: "Card number",
+         name: "card_num_1"
+        })}}
+        {{inputBlock({
+          label: "",
+         name: "card_num_2"
+        })}}
+        {{inputBlock({
+          label: "",
+         name: "card_num_3"
+        })}}
+        {{inputBlock({
+          label: "",
+         name: "card_num_4"
+        })}}
+      </div>
+      <div class="payment-form__row payment-form__row_grid">
+        {{inputBlock({
+          label: "Expire date",
+         name: "card_date"
+        })}}
+        {{inputBlock({
+          label: 'CVV code    <div class="tooltip">
+                          <div class="tooltip__icon">?</div>
+                          <div class="tooltip__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias quis mollitia earum!
+                            Dolorem, dicta ea, rem consequatur praesentium inventore nihil quia sit blanditiis
+                            voluptatibus doloribus est eum provident dolorum?
+                          </div>
+                        </div>',
+          name: "card_cvv"
+        })}}
+      </div>
+    </div>
+    <div class="payment-form__footer">
+      <div class="payment-form__checkboxes">
+
+        {{checkbox({
+        className:"payment-form__checkbox",
+        name: "save_info",
+        value: "true",
+        children: " Save information of this credit card",
+        checked: true
+      })}}
+        {{checkbox({
+        className:"payment-form__checkbox",
+        name: "accept",
+        value: "true",
+        children: 'I accept the <a href="#" target="_blank" class="main-link">terms and comditions</a> and the <a
+                          href="#" target="_blank" class="main-link">Privacy Policies</a>'
+      })}}
+
+      </div>
+      <div class="payment-form__btns">
+        {{ button({
+				className: 'payment-form__btn',
+				children: 'Back',
+        transparent: true,
+        href: '#'
+					}) }}
+        {{ button({
+				    className: 'payment-form__btn',
+				    children: 'Check Out'
+          }) 
+        }}
+      </div>
+    </div>
+  </form>
+</div>

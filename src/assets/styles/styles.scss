@@ -1,0 +1,24 @@
+// ======= GLOBAL =======
+@import 'constants';
+@import 'lib/base';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'layout';
+// @import 'controls';
+
+// ======= COMPONENTS =======
+@import '../../components/button/button';
+@import '../../components/checkbox/checkbox';
+@import '../../components/input/input';
+@import '../../components/progressBar/progressBar';
+@import '../../components/card/card';
+
+// ======= INCLUDES =======
+@import '../../includes/header/header';
+@import '../../includes/body/body';
+@import '../../includes/aside/aside';
+@import '../../includes/form/form';
+
+// ======= PAGES =======
+@import 'pages/main';

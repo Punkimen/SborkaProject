@@ -1,0 +1,38 @@
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	overflow-x: hidden;
+
+}
+
+.container {
+	max-width: 1860px;
+	width: 100%;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.content__wrapper {
+	display: grid;
+	grid-template-columns: 1fr minmax(320px, 381px);
+	position: relative;
+
+	@include max-screen($md3) {
+		display: block;
+	}
+}
+
+.main-block {
+	padding: 59px 50px 40px 50px;
+
+	@include max-screen($md2) {
+		padding-left: 20px;
+	}
+}
+
+h2.title {
+	font-size: 18px;
+	font-weight: bold;
+}
